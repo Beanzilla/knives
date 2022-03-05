@@ -6,7 +6,8 @@ if knives.settings.durability == false then
 end
 
 minetest.register_tool("knives:bronze", {
-	description = "Bronze Knife",
+	short_description = "Bronze Knife",
+    description = "Bronze Knife\nDamage: 15",
 	inventory_image = "knives_bronze.png",
 	tool_capabilities = {
 		full_punch_interval = 0.5,
