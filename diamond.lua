@@ -7,6 +7,12 @@ local power_to_standard = function (itemstack, placer, pointed_thing)
 	return ItemStack("knives:diamond")
 end
 
+local standard_descript = "Diamond Knife\nDamage: 20\nRight Click for Power Mode"
+
+if knives.settings.allow_power_mode == false then
+	standard_descript = "Diamond Knife\nDamage: 20\nPower Mode is disabled"
+end
+
 minetest.register_tool("knives:diamond", {
 	short_description = "Diamond Knife",
     description = "Diamond Knife\nDamage: 20\nRight Click for Power Mode",
@@ -32,9 +38,10 @@ minetest.register_tool("knives:diamond_pwr", {
 		full_punch_interval = 0.5,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=0, maxlevel=3},
+			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=1, maxlevel=3},
 		},
 		damage_groups = {fleshy=40},
+		punch_attack_uses = 1,
 	},
 	groups = {sword = 1},
 	on_place = knives.toggle_power_mode,

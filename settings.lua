@@ -8,8 +8,9 @@ if set.allow_crafting == nil then
     minetest.settings:set_bool("knives.allow_crafting", set.allow_crafting)
 end
 
-set.durability = minetest.settings:get_bool("knives.durability")
-if set.durability == nil then
-    set.durability = true
-    minetest.settings:set_bool("knives.durability", set.durability)
+set.allow_power_mode = minetest.settings:get_bool("knives.allow_power_mode")
+if set.allow_power_mode == nil then
+    set.allow_power_mode = true
+    minetest.settings:set_bool("knives.allow_power_mode", set.allow_power_mode)
 end
+
