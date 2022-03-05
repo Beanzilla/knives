@@ -13,7 +13,7 @@ Adds various knives with extreme damage
 
 Each knife supports Power Mode, it essentially doubles the damage dealt making it quite useful for one swing kills.
 
-> Currently a player could "live" in Power Mode, with no penalty to using Power Mode and hugh bonuses to damage.
+> While it doubles the damage it only has 1 use durability (this means it breaks on use)
 
 # Settings
 
