@@ -28,4 +28,4 @@ All knife textures are from default Minetest Game (MTG) thus CC-BY-SA-3.0
 
 See LICENSE for more information on texture license.
 
-> TLDR; BlockMen (CC BY-SA 3.0): default_tool_*.png (which has been renamed and modifed for knives_*.png which includes knives_*_pwr.png)
+> TLDR; BlockMen (CC BY-SA 3.0): default_tool_\*.png (which has been renamed and modifed for knives_\*.png which includes knives_\*_pwr.png)
