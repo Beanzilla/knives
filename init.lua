@@ -2,7 +2,7 @@
 knives = {}
 
 knives.modpath = minetest.get_modpath("knives")
-knives.version = "1.0"
+knives.version = "1.1"
 
 knives.log = function(msg)
     minetest.log("action", "[knives] " .. tostring(msg))
@@ -14,6 +14,7 @@ end
 
 knives.dofile("settings")
 
+-- A helper function for determining what the itemstack's powered or standard item/modes are.
 knives.toggle_power_mode = function (itemstack, placer, pointed_thing)
     local parts = string.split(itemstack:get_name(), "_")
     --knives.log(itemstack:get_name() .. " | " .. tostring(#parts) .. " | " .. minetest.serialize(parts))
@@ -35,8 +36,13 @@ knives.toggle_power_mode = function (itemstack, placer, pointed_thing)
 end
 
 knives.dofile("steel")
-knives.dofile("bronze")
-knives.dofile("mese")
+-- Bronze is removed if MCL
+if minetest.get_modpath("mcl_core") == nil then
+    knives.dofile("bronze")
+else
+    knives.log("Bronze Knives are disabled in MCL.")
+end
+knives.dofile("mese") -- Renamed to Gold if MCL
 knives.dofile("diamond")
 
 knives.log("Version: "..knives.version)

@@ -1,0 +1,14 @@
+
+# Can a player craft a knife? (Steel, Bronze, Mese, Diamond)
+# Does change based on game.
+knives.allow_crafting (Allow Crafting Knives) bool true
+
+# Do we allow players to switch modes with knives?
+# If false, Powered Knives are only obtained via give or a shop
+# And a Powered Knife will not allow switching back to standard
+# If true, Standart Knives can be right clicked to switch to Power Mode
+knives.allow_power_mode (Allow Power Mode) bool true
+
+# Limits Powered Knives to single use (or if disabled allows unlimited uses)
+# When enabled a Powered Knife will be destroyed on a single use, making it limited
+knife.power_mode_is_single (Power Mode is Single Use) bool true
